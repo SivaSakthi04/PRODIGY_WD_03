@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #ff6ec4,
+        #7873f5,
+        #42e695
+    );
+    overflow:hidden;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    text-align:center;
+}
+
+h1{
+    margin-bottom:15px;
+    color:#333;
+}
+
+#status{
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:bold;
+    color:#ff4081;
+}
+
+.board{
+    display:grid;
+    grid-template-columns:repeat(3,100px);
+    gap:10px;
+}
+
+.cell{
+    width:100px;
+    height:100px;
+    background:#f1f5f9;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cell:hover{
+    transform:scale(1.05);
+    background:#dbeafe;
+}
+
+.x{
+    color:#ff4d6d;
+}
+
+.o{
+    color:#4361ee;
+}
+
+.winner{
+    background:#8ef58e !important;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#4361ee;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#304ffe;
+}
+
+.flower{
+    position:fixed;
+    top:-50px;
+    font-size:35px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-50px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
